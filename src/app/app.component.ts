@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { exerciseLists } from '../exercises';
+import { ExercisesPageComponent } from './exercises-page/exercises-page.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ts-training';
+  public constructor(router: Router) {
+    exerciseLists.forEach(list => router.config.push({
+      path: list.title,
+      component: ExercisesPageComponent,
+      data: { exercisesList: list },
+    }));
+  }
 }

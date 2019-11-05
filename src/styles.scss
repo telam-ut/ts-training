@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~ut_asset_toolkit/assets/scss/ut_asset_toolkit.scss";
+
+header p {
+  color: white;
+}
+
+.exercise-status span tk-badge {
+  width: 50px;
+}
+
+code {
+  font-family: monospace;
+  background-color: white;
+  padding: 0.25em;
+
+  &.code-block {
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: block;
+  }
+}
+
+
+@import "~ut_asset_toolkit/assets/scss/config/spacing";

@@ -1,0 +1,7 @@
+<tk-container header>
+
+  <h2 slot="header-title" class="t-xl">{{ (exercisesList$ | async).title }}</h2>
+  <div *ngFor="let exercise of (exercisesList$ | async).exercises" class="mb-4x">
+    <exercise [exercise]="exercise"></exercise>
+  </div>
+</tk-container>

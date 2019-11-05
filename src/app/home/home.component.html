@@ -1,0 +1,12 @@
+<tk-container header>
+  <h2 slot="header-title" class="t-xl">Exercises</h2>
+  <div *ngFor="let link of links" class="mb-4x">
+    <div class="mb-4x">
+      <a [routerLink]="link.path">
+        <tk-container subcontainer>
+          <p class="t-large">{{ link.title }}</p>
+        </tk-container>
+      </a>
+    </div>
+  </div>
+</tk-container>
