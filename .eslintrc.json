@@ -49,8 +49,8 @@
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-
-
+    "no-restricted-globals": "off",
+    "no-template-curly-in-string": "off",
     "padding-line-between-statements": ["error", { "blankLine": "always", "prev": "if", "next": "*" }]
   }
 }

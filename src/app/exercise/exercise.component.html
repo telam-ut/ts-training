@@ -3,20 +3,14 @@
     {{ exercise.title }}
   </h2>
   <div slot="header-actions">
-  <span *ngIf="exercise.isCorrect(); else incorrect">
-      Complete
-    <tk-badge type="success" size="medium">&nbsp;✓&nbsp;</tk-badge>
-    </span>
-    <ng-template #incorrect>
-      <tk-badge type="dark" size="medium">. . .</tk-badge>
-    </ng-template>
+    <is-complete [isComplete]="exercise.isComplete()"></is-complete>
   </div>
   <ng-container *ngFor="let line of exercise.description">
     <span [innerHTML]="line"></span>
     <br>
   </ng-container>
 </tk-container>
-<div class="m-4x">
+<div class="m-4x mb-5x">
   <h3 class="t-medium">Objective:</h3>
   <span [innerHTML]="exercise.objective"></span>
 </div>

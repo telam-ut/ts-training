@@ -1,7 +1,14 @@
-<tk-container header>
+<tk-container *ngIf="exercisesList$ | async; let exercisesList"header>
+  <h2 slot="header-title" class="t-xl">{{ exercisesList.title }}</h2>
 
-  <h2 slot="header-title" class="t-xl">{{ (exercisesList$ | async).title }}</h2>
-  <div *ngFor="let exercise of (exercisesList$ | async).exercises" class="mb-4x">
-    <exercise [exercise]="exercise"></exercise>
+  <div slot="header-actions">
+    <is-complete [isComplete]="isComplete(exercisesList)" [isAggregate]="true" class="t-large"></is-complete>
   </div>
+  <div *ngFor="let exercise of exercisesList.exercises">
+    <div class="mb-4x">
+      <exercise [exercise]="exercise"></exercise>
+      <hr>
+    </div>
+  </div>
+  <a class="t-xl" routerLink="/">←🏠</a>
 </tk-container>

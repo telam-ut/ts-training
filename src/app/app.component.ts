@@ -10,7 +10,7 @@ import { ExercisesPageComponent } from './exercises-page/exercises-page.componen
 export class AppComponent {
   public constructor(router: Router) {
     exerciseLists.forEach(list => router.config.push({
-      path: list.title,
+      path: list.title.replace(/\s+/g, ''),
       component: ExercisesPageComponent,
       data: { exercisesList: list },
     }));

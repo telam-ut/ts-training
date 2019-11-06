@@ -22,5 +22,11 @@ code {
   }
 }
 
+.home-link is-complete {
+  float: right;
+  color: $brand-midnight;
+  margin-top: 0.125em;
+}
+
 
 @import "~ut_asset_toolkit/assets/scss/config/spacing";

@@ -13,9 +13,13 @@ export class ExercisesPageComponent implements OnInit {
   constructor(private route: ActivatedRoute) {
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.exercisesList$ = this.route.data.pipe(
       map((data) => data.exercisesList),
     );
+  }
+
+  public isComplete(exerciseList: ExerciseList) {
+    return exerciseList.exercises.every(list => list.isComplete());
   }
 }

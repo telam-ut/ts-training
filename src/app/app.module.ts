@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { ExercisesPageComponent } from './exercises-page/exercises-page.component';
 import { HomeComponent } from './home/home.component';
+import { IsCompleteComponent } from './is-complete/is-complete.component';
 
 
 export const routes: Routes = [
@@ -21,6 +22,7 @@ export const routes: Routes = [
     HomeComponent,
     ExerciseComponent,
     ExercisesPageComponent,
+    IsCompleteComponent,
   ],
   entryComponents: [
     ExercisesPageComponent,

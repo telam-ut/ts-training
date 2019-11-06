@@ -2,8 +2,9 @@
   <h2 slot="header-title" class="t-xl">Exercises</h2>
   <div *ngFor="let link of links" class="mb-4x">
     <div class="mb-4x">
-      <a [routerLink]="link.path">
+      <a [routerLink]="link.path" class="home-link">
         <tk-container subcontainer>
+          <is-complete [isComplete]="link.allComplete" [isAggregate]="true" class="t-large"></is-complete>
           <p class="t-large">{{ link.title }}</p>
         </tk-container>
       </a>

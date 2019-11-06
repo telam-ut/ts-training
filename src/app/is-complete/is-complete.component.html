@@ -1,0 +1,7 @@
+<span *ngIf="isComplete; else incomplete">
+      {{ isAggregate ? 'All Complete' : 'Complete' }}
+    <tk-badge type="success" size="medium">&nbsp;✓&nbsp;</tk-badge>
+</span>
+<ng-template #incomplete>
+  <tk-badge type="dark" size="medium">. . .</tk-badge>
+</ng-template>
