@@ -3,10 +3,14 @@ import { variablesExercises } from './01 - Variables';
 import { dataTypesExercises } from './02 - Data Types';
 import { functionExercises } from './03 - Functions';
 import { objectExercises } from './04 - Objects';
+import { arraysExercises } from './05 - Arrays';
+import { promisesExercises } from './06 - Promises';
 
 export const exerciseLists: ExerciseList[] = [
   variablesExercises,
   dataTypesExercises,
   functionExercises,
   objectExercises,
+  arraysExercises,
+  promisesExercises,
 ];

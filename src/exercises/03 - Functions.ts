@@ -40,8 +40,14 @@ export const functionExercises: ExerciseList = {
           'say_something = -> { "This is a lambda" }',
           'puts say_something.call',
           '',
-          '// JS arrow function:',
+          '// JS arrow function, lambda-style:',
           'const saySomething = () => "This is a lambda"',
+          'console.log(saySomething());',
+          '',
+          '// JS arrow function, multiple lines:',
+          'const saySomething = () => {',
+          '  return "This is a function";',
+          '}',
           'console.log(saySomething());',
         ),
       ],
@@ -49,8 +55,12 @@ export const functionExercises: ExerciseList = {
       isComplete(): boolean {
         // ↓ Modify code below this line ↓
         const foo = () => false;
+        /* eslint-disable arrow-body-style */
+        const bar = () => {
+          return true;
+        };
         // ↑ Modify code above this line ↑
-        return foo();
+        return foo() && !bar();
       },
     },
   ],
